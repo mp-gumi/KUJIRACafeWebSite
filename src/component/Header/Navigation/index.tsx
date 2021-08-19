@@ -5,7 +5,7 @@ import backgroundNavigation from "src/component/Header/Navigation/menu-bg.png";
 import { maxWidth } from "src/App";
 
 const pageList = [
-  { displayName: "ホーム", urlName: "index" },
+  { displayName: "ホーム", urlName: "home" },
   { displayName: "店舗案内", urlName: "about" },
   { displayName: "アクセス", urlName: "access" },
   { displayName: "メニュー", urlName: "menu" },
