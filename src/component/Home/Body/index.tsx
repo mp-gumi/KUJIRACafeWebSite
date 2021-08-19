@@ -4,7 +4,7 @@ import { jsx, css } from "@emotion/react";
 import keyVisual from "src/component/Home/Body/keyvisual.jpg";
 
 export const textBlue = "#3f5170";
-export const IndexBody = () => {
+export const Body = () => {
   return (
     <div>
       <img
