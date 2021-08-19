@@ -1,7 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, css } from "@emotion/react";
-import keyVisual from "src/component/IndexBody/keyvisual.jpg";
+import keyVisual from "src/component/Home/Body/keyvisual.jpg";
 
 export const textBlue = "#3f5170";
 export const IndexBody = () => {
