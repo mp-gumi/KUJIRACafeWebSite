@@ -14,16 +14,28 @@ const pageList = [
 
 const pages = pageList.map((page) => {
   return (
-    <a href={`${page.urlName}.html`}>
-      <li
+    <li
+      css={css`
+        font-size: 16px;
+        padding-right: 30px;
+        @media (max-width: 767px) {
+          padding-bottom: 10px;
+        }
+      `}
+    >
+      <a
+        href={`${page.urlName}.html`}
         css={css`
-          font-size: 16px;
-          padding-right: 30px;
+          text-decoration: none;
+          color: #3c454d;
+          &:hover {
+            color: #7b8dac;
+          }
         `}
       >
         {page.displayName}
-      </li>
-    </a>
+      </a>
+    </li>
   );
 });
 
@@ -34,9 +46,9 @@ export const Navigation = () => {
         background-image: url(${backgroundNavigation});
         background-repeat: repeat-x;
         vertical-align: top;
+        margin-bottom: 15px;
         @media (max-width: ${maxWidth}) {
           background-color: #dfddda;
-          margin-bottom: 15px;
         }
       `}
     >
