@@ -1,6 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, css } from "@emotion/react";
+import { Link } from "react-router-dom";
 import backgroundNavigation from "src/component/Header/Navigation/menu-bg.png";
 import { maxWidth } from "src/App";
 
@@ -23,8 +24,8 @@ const pages = pageList.map((page) => {
         }
       `}
     >
-      <a
-        href={`${page.urlName}.html`}
+      <Link
+        to={`/${page.urlName}`}
         css={css`
           text-decoration: none;
           color: #3c454d;
@@ -34,7 +35,7 @@ const pages = pageList.map((page) => {
         `}
       >
         {page.displayName}
-      </a>
+      </Link>
     </li>
   );
 });
