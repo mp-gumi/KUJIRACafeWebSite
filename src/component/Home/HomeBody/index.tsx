@@ -1,10 +1,10 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, css } from "@emotion/react";
-import keyVisual from "src/component/Home/Body/keyvisual.jpg";
+import keyVisual from "src/component/Home/HomeBody/keyvisual.jpg";
 
 export const textBlue = "#3f5170";
-export const Body = () => {
+export const HomeBody = () => {
   return (
     <div>
       <img

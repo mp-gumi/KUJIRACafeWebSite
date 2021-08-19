@@ -2,14 +2,14 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/react";
 import { Header } from "src/component/Header";
-import { AboutBody } from "src/component/About/AboutBody";
+import { AccessBody } from "src/component/Access/AccessBody";
 import { Footer } from "src/component/Footer";
 
-export const About = () => {
+export const Access = () => {
   return (
     <div>
       <Header />
-      <AboutBody />
+      <AccessBody />
       <Footer />
     </div>
   );
