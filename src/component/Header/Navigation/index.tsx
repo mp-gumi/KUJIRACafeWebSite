@@ -2,6 +2,7 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/react";
 import backgroundNavigation from "src/component/Header/Navigation/menu-bg.png";
+import { maxWidth } from "src/App";
 
 const pageList = [
   { displayName: "ホーム", urlName: "index" },
@@ -33,7 +34,7 @@ export const Navigation = () => {
         background-image: url(${backgroundNavigation});
         background-repeat: repeat-x;
         vertical-align: top;
-        @media (max-width: 767px) {
+        @media (max-width: ${maxWidth}) {
           background-color: #dfddda;
           margin-bottom: 15px;
         }
@@ -44,7 +45,7 @@ export const Navigation = () => {
           display: flex;
           justify-content: start;
           padding: 20px 10px 15px 20px;
-          @media (max-width: 767px) {
+          @media (max-width: ${maxWidth}) {
             flex-direction: column;
             padding: 20px 10px 15px 20px;
           }
