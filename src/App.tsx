@@ -7,7 +7,11 @@ import { IndexBody } from "src/component/IndexBody";
 
 export const App = () => {
   return (
-    <div>
+    <div
+      css={css`
+        background-color: #eeece9;
+      `}
+    >
       <Header />
       <IndexBody />
       <Footer />

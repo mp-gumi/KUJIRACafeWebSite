@@ -14,7 +14,14 @@ const pageList = [
 const pages = pageList.map((page) => {
   return (
     <a href={`${page.urlName}.html`}>
-      <li>{page.displayName}</li>
+      <li
+        css={css`
+          font-size: 16px;
+          padding-right: 30px;
+        `}
+      >
+        {page.displayName}
+      </li>
     </a>
   );
 });
@@ -25,9 +32,18 @@ export const Navigation = () => {
       css={css`
         background-image: url(${backgroundNavigation});
         background-repeat: repeat-x;
+        vertical-align: top;
       `}
     >
-      <ul>{pages}</ul>
+      <ul
+        css={css`
+          display: flex;
+          justify-content: start;
+          padding: 20px 10px 15px 20px;
+        `}
+      >
+        {pages}
+      </ul>
     </div>
   );
 };
