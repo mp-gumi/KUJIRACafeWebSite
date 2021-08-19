@@ -19,6 +19,7 @@ export const IndexBody = () => {
           margin: 20px 0;
           padding: 5px;
           font-size: 22px;
+          font-weight: bold;
           color: ${textBlue};
           border-bottom: dotted 3px ${textBlue};
         `}

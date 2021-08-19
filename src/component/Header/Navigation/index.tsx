@@ -33,6 +33,10 @@ export const Navigation = () => {
         background-image: url(${backgroundNavigation});
         background-repeat: repeat-x;
         vertical-align: top;
+        @media (max-width: 767px) {
+          background-color: #dfddda;
+          margin-bottom: 15px;
+        }
       `}
     >
       <ul
@@ -40,6 +44,10 @@ export const Navigation = () => {
           display: flex;
           justify-content: start;
           padding: 20px 10px 15px 20px;
+          @media (max-width: 767px) {
+            flex-direction: column;
+            padding: 20px 10px 15px 20px;
+          }
         `}
       >
         {pages}

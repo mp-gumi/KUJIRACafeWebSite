@@ -5,6 +5,8 @@ import { Header } from "src/component/Header";
 import { Footer } from "src/component/Footer";
 import { IndexBody } from "src/component/IndexBody";
 
+export const maxWidth = "767px";
+
 export const App = () => {
   return (
     <div
@@ -16,6 +18,9 @@ export const App = () => {
         css={css`
           max-width: 960px;
           margin: 0 auto;
+          @media (max-width: ${maxWidth}) {
+            margin: 0 8px;
+          }
         `}
       >
         <Header />
