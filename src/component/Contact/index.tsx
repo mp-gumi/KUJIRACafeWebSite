@@ -5,7 +5,7 @@ import { Header } from "src/component/Header";
 import { ContactBody } from "src/component/Contact/ContactBody";
 import { Footer } from "src/component/Footer";
 
-export const Access = () => {
+export const Contact = () => {
   return (
     <div>
       <Header />

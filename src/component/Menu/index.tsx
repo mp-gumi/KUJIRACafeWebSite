@@ -5,7 +5,7 @@ import { Header } from "src/component/Header";
 import { MenuBody } from "src/component/Menu/MenuBody";
 import { Footer } from "src/component/Footer";
 
-export const Access = () => {
+export const Menu = () => {
   return (
     <div>
       <Header />
