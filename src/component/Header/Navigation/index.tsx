@@ -1,10 +1,10 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, css } from "@emotion/react";
-import backgroundImage from "src/component/Header/Navigation/menu-bg.png";
+import backgroundNavigation from "src/component/Header/Navigation/menu-bg.png";
 
 const pageList = [
-  { displayName: "ホーム", urlName: "home" },
+  { displayName: "ホーム", urlName: "about" },
   { displayName: "店舗案内", urlName: "about" },
   { displayName: "アクセス", urlName: "access" },
   { displayName: "メニュー", urlName: "menu" },
@@ -23,7 +23,7 @@ export const Navigation = () => {
   return (
     <div
       css={css`
-        background-image: url(${backgroundImage});
+        background-image: url(${backgroundNavigation});
         background-repeat: repeat-x;
       `}
     >
