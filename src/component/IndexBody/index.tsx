@@ -41,7 +41,17 @@ export const IndexBody = () => {
         `}
       >
         3月20日（月・祝）は、18時からアコースティックギターデュオ「
-        <a href={""}>PICNIC</a>
+        <a
+          href={""}
+          css={css`
+            color: #d25833;
+            &:hover {
+              color: #e3937a;
+            }
+          `}
+        >
+          PICNIC
+        </a>
         」のライブを開催します。投げ銭方式です。お楽しみに！
       </p>
     </div>
