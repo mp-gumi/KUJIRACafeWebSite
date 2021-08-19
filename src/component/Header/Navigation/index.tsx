@@ -4,7 +4,7 @@ import { jsx, css } from "@emotion/react";
 import backgroundNavigation from "src/component/Header/Navigation/menu-bg.png";
 
 const pageList = [
-  { displayName: "ホーム", urlName: "about" },
+  { displayName: "ホーム", urlName: "index" },
   { displayName: "店舗案内", urlName: "about" },
   { displayName: "アクセス", urlName: "access" },
   { displayName: "メニュー", urlName: "menu" },
