@@ -13,7 +13,7 @@ const pageList = [
 
 const pages = pageList.map((page) => {
   return (
-    <a>
+    <a href={`${page.urlName}.html`}>
       <li>{page.displayName}</li>
     </a>
   );
@@ -21,7 +21,12 @@ const pages = pageList.map((page) => {
 
 export const Navigation = () => {
   return (
-    <div>
+    <div
+      css={css`
+        background-image: url(${backgroundImage});
+        background-repeat: repeat-x;
+      `}
+    >
       <ul>{pages}</ul>
     </div>
   );
