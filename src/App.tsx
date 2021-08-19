@@ -12,9 +12,16 @@ export const App = () => {
         background-color: #eeece9;
       `}
     >
-      <Header />
-      <IndexBody />
-      <Footer />
+      <div
+        css={css`
+          max-width: 960px;
+          margin: 0 auto;
+        `}
+      >
+        <Header />
+        <IndexBody />
+        <Footer />
+      </div>
     </div>
   );
 };

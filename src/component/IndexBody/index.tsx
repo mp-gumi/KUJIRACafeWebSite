@@ -3,6 +3,7 @@
 import { jsx, css } from "@emotion/react";
 import keyVisual from "src/component/IndexBody/keyvisual.jpg";
 
+export const textBlue = "#3f5170";
 export const IndexBody = () => {
   return (
     <div>
@@ -18,8 +19,8 @@ export const IndexBody = () => {
           margin: 20px 0;
           padding: 5px;
           font-size: 22px;
-          color: #3f5170;
-          border-bottom: dotted 3px #3f5170;
+          color: ${textBlue};
+          border-bottom: dotted 3px ${textBlue};
         `}
       >
         News
