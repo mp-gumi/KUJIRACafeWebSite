@@ -46,6 +46,7 @@ export const MenuBody = () => {
       >
         メニュー
       </h2>
+
       {itemList.map((item) => {
         return (
           <div
@@ -65,17 +66,20 @@ export const MenuBody = () => {
               alt={`${item.name}`}
               css={css`
                 max-width: 100%;
+                height: auto;
                 margin-right: 16px;
               `}
             />
             <div
               css={css`
-                min-width: 336px;
+                min-width: 366px;
               `}
             >
               <p
                 css={css`
                   font-weight: bold;
+                  @media (max-width: ${maxWidth}) {
+                margin-top: 16px;
                 `}
               >
                 {item.name}

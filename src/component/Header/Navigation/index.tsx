@@ -13,33 +13,6 @@ const pageList = [
   { displayName: "お問い合わせ", urlName: "contact" },
 ];
 
-const pages = pageList.map((page) => {
-  return (
-    <li
-      css={css`
-        font-size: 16px;
-        padding-right: 30px;
-        @media (max-width: 767px) {
-          padding-bottom: 10px;
-        }
-      `}
-    >
-      <Link
-        to={`/${page.urlName}`}
-        css={css`
-          text-decoration: none;
-          color: #3c454d;
-          &:hover {
-            color: #7b8dac;
-          }
-        `}
-      >
-        {page.displayName}
-      </Link>
-    </li>
-  );
-});
-
 export const Navigation = () => {
   return (
     <div
@@ -64,7 +37,32 @@ export const Navigation = () => {
           }
         `}
       >
-        {pages}
+        {pageList.map((page) => {
+          return (
+            <li
+              css={css`
+                font-size: 16px;
+                padding-right: 30px;
+                @media (max-width: ${maxWidth}) {
+                  padding-bottom: 10px;
+                }
+              `}
+            >
+              <Link
+                to={`/${page.urlName}`}
+                css={css`
+                  text-decoration: none;
+                  color: #3c454d;
+                  &:hover {
+                    color: #7b8dac;
+                  }
+                `}
+              >
+                {page.displayName}
+              </Link>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );

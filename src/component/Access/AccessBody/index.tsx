@@ -15,8 +15,8 @@ const routes = routeList.map((route) => {
     <li
       css={css`
         &:before {
-          counter-increment: num;
-          content: counter(num) ". ";
+          counter-increment: order;
+          content: counter(order) ". ";
           color: ${textBlue};
         }
       `}
@@ -69,7 +69,7 @@ export const AccessBody = () => {
         </p>
         <ol
           css={css`
-            counter-reset: num;
+            counter-reset: order;
             list-style-type: none;
             padding-left: 15px;
           `}
