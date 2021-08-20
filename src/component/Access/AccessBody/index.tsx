@@ -1,7 +1,29 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, css } from "@emotion/react";
+import mapImage from "src/component/Access/AccessBody/map.png";
 import { textBlue } from "src/component/Home/HomeBody";
+
+const routeList = [
+  "駅東口を出ます。",
+  "駅前商店街を国道999合繊方面へ向かいます。",
+  "国道999合線を渡り直進します。",
+  "銀行ATMの角を左に曲がり2軒目の1階です。",
+];
+const routes = routeList.map((route) => {
+  return (
+    <li
+      css={css`
+        &:before {
+          counter-increment: num;
+          content: counter(num) ". ";
+        }
+      `}
+    >
+      {route}
+    </li>
+  );
+});
 
 export const AccessBody = () => {
   return (
@@ -18,6 +40,35 @@ export const AccessBody = () => {
       >
         アクセス
       </h2>
+      <div
+        css={css`
+          text-align: center;
+        `}
+      >
+        <img src={mapImage} alt="地図" />
+      </div>
+      <div
+        css={css`
+          font-size: 16px;
+          line-height: 1.6;
+        `}
+      >
+        <p
+          css={css`
+            margin: 16px 0;
+          `}
+        >
+          九寺楽駅 東口 徒歩2分
+        </p>
+        <ul
+          css={css`
+            counter-reset: num;
+            list-style-type: none;
+          `}
+        >
+          {routes}
+        </ul>
+      </div>
     </div>
   );
 };
