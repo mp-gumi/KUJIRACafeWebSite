@@ -17,6 +17,7 @@ const routes = routeList.map((route) => {
         &:before {
           counter-increment: num;
           content: counter(num) ". ";
+          color: ${textBlue};
         }
       `}
     >
@@ -45,7 +46,13 @@ export const AccessBody = () => {
           text-align: center;
         `}
       >
-        <img src={mapImage} alt="地図" />
+        <img
+          src={mapImage}
+          alt="地図"
+          css={css`
+            max-width: 100%;
+          `}
+        />
       </div>
       <div
         css={css`
@@ -60,14 +67,15 @@ export const AccessBody = () => {
         >
           九寺楽駅 東口 徒歩2分
         </p>
-        <ul
+        <ol
           css={css`
             counter-reset: num;
             list-style-type: none;
+            padding-left: 15px;
           `}
         >
           {routes}
-        </ul>
+        </ol>
       </div>
     </div>
   );
