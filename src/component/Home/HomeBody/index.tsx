@@ -15,6 +15,7 @@ export const HomeBody = () => {
         `}
       />
       <h2
+        id="news"
         css={css`
           margin: 20px 0;
           padding: 5px;
@@ -42,7 +43,9 @@ export const HomeBody = () => {
       >
         3月20日（月・祝）は、18時からアコースティックギターデュオ「
         <a
-          href={""}
+          href={"https://larc-en-ciel.com/index.php"}
+          target="_blank"
+          rel="noopener noreferrer"
           css={css`
             color: #d25833;
             &:hover {

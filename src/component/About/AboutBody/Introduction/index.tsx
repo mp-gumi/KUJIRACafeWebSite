@@ -1,6 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, css } from "@emotion/react";
+import { Link } from "react-router-dom";
 import aboutPhoto from "src/component/About/AboutBody/Introduction/about-photo.jpg";
 import { textBlue } from "src/component/Home/HomeBody";
 import { maxWidth } from "src/App";
@@ -68,7 +69,19 @@ export const Introduction = () => {
         >
           天気のいい日には、自然を感じられるテラス席もおすすめ。テラス席のみ、ペットの同伴もOKです。おひとり様もお子様連れの方も、お気に入りのお席で、思い思いの時間をゆったりとお過ごしください。
         </p>
-        カフェでの時間をより楽しいものにしていただくべく、フラワーアレンジメントの講座や絵本の読み聞かせ、作品展やライブなど、さまざまなイベントも開催しております。スケジュールは＜News＞で告知いたしますので、ご確認くださいませ。
+        カフェでの時間をより楽しいものにしていただくべく、フラワーアレンジメントの講座や絵本の読み聞かせ、作品展やライブなど、さまざまなイベントも開催しております。スケジュールは
+        <Link
+          to="/home#news"
+          css={css`
+            color: #d25833;
+            &:hover {
+              color: #e3937a;
+            }
+          `}
+        >
+          ＜News＞
+        </Link>
+        で告知いたしますので、ご確認くださいませ。
         <p
           css={css`
             margin-top: 16px;
