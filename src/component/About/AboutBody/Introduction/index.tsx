@@ -79,7 +79,7 @@ export const Introduction = () => {
             }
           `}
         >
-          ＜News＞
+          {"<News>"}
         </Link>
         で告知いたしますので、ご確認くださいませ。
         <p
