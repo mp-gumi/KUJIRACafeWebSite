@@ -37,6 +37,7 @@ export const ContactBody = () => {
         <div
           css={css`
             border-bottom: 1px dotted #bec2c7;
+            padding: 12px;
           `}
         >
           お問い合わせの種類
@@ -54,6 +55,36 @@ export const ContactBody = () => {
           はい
           <input type="radio" name="first" value="no" />
           いいえ
+        </div>
+        <div
+          css={css`
+            border-bottom: 1px dotted #bec2c7;
+          `}
+        >
+          当カフェをお知りになったきっかけは？
+          <br />
+          <input type="checkbox" name="how" value="friends" />
+          知り合いの紹介で
+          <input type="checkbox" name="how" value="magazines" />
+          雑誌・Webサイトで見て
+        </div>
+        <div
+          css={css`
+            border-bottom: 1px dotted #bec2c7;
+          `}
+        >
+          お問い合わせの件名
+          <br />
+          <input type="text" name="subject" placeholder="お問い合わせ" />
+        </div>
+        <div
+          css={css`
+            border-bottom: 1px dotted #bec2c7;
+          `}
+        >
+          お問い合わせの具体的な内容
+          <br />
+          <textarea name="message"></textarea>
         </div>
       </form>
     </div>
