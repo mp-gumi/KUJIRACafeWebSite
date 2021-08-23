@@ -6,8 +6,8 @@ import { textBlue } from "src/component/Home/HomeBody";
 
 const routeList = [
   "駅東口を出ます。",
-  "駅前商店街を国道999合繊方面へ向かいます。",
-  "国道999合線を渡り直進します。",
+  "駅前商店街を国道999号線方面へ向かいます。",
+  "国道999号線を渡り直進します。",
   "銀行ATMの角を左に曲がり2軒目の1階です。",
 ];
 const routes = routeList.map((route) => {
