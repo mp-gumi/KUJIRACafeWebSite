@@ -6,6 +6,7 @@ import { AccessBody } from "src/component/Access/AccessBody";
 import { Footer } from "src/component/Footer";
 
 export const Access = () => {
+  document.title = "アクセス｜KUJIRA Cafe Website";
   return (
     <div>
       <Header />

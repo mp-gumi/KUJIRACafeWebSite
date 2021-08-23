@@ -52,7 +52,7 @@ const informationList = [
   { name: "定休日", content: "水曜日・日曜日" },
   { name: "ご予約", content: reserveContent },
 ];
-const infomationTable = informationList.map((infomation) => {
+const informationTable = informationList.map((information) => {
   return (
     <tr>
       <th
@@ -66,7 +66,7 @@ const infomationTable = informationList.map((infomation) => {
           background-color: #dde2ea;
         `}
       >
-        {infomation.name}
+        {information.name}
       </th>
       <td
         css={css`
@@ -75,7 +75,7 @@ const infomationTable = informationList.map((infomation) => {
           line-height: 1.6;
         `}
       >
-        {infomation.content}
+        {information.content}
       </td>
     </tr>
   );
@@ -103,7 +103,7 @@ export const Information = () => {
           font-size: 16px;
         `}
       >
-        {infomationTable}
+        {informationTable}
       </table>
     </div>
   );

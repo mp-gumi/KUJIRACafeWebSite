@@ -5,13 +5,13 @@ import { textBlue } from "src/component/Home/HomeBody";
 import { maxWidth } from "src/App";
 
 const kindList = [
-  { value: "reservation", displayName: "ご予約" },
-  { value: "event", displayName: "イベントについて" },
-  { value: "other", displayName: "その他のお問い合わせ" },
+  { value: "reservation", displayText: "ご予約" },
+  { value: "event", displayText: "イベントについて" },
+  { value: "other", displayText: "その他のお問い合わせ" },
 ];
 
 const kinds = kindList.map((kind) => {
-  return <option value={`${kind.value}`}>{kind.displayName}</option>;
+  return <option value={`${kind.value}`}>{kind.displayText}</option>;
 });
 
 export const ContactBody = () => {
