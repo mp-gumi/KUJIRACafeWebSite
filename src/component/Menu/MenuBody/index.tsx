@@ -68,6 +68,7 @@ export const MenuBody = () => {
               css={css`
                 max-width: 100%;
                 margin-right: 16px;
+                flex-basis: max-content;
               `}
             />
 

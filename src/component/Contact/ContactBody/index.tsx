@@ -4,14 +4,6 @@ import { jsx, css } from "@emotion/react";
 import { textBlue } from "src/component/Home/HomeBody";
 import { maxWidth } from "src/App";
 
-const formDecoration = `
-font-size: 16px;
-line-height: 1.6;
-width: 30em;
-padding: 12px;
-border-bottom: 1px dotted #bec2c7;
-`;
-
 const kindList = [
   { value: "reservation", displayName: "ご予約" },
   { value: "event", displayName: "イベントについて" },
@@ -23,6 +15,17 @@ const kinds = kindList.map((kind) => {
 });
 
 export const ContactBody = () => {
+  const formDecoration = css`
+    font-size: 16px;
+    line-height: 1.6;
+    width: 30em;
+    padding: 12px;
+    border-bottom: 1px dotted #bec2c7;
+    @media (max-width: ${maxWidth}) {
+      width: 100%;
+    }
+  `;
+
   return (
     <div>
       <h2
@@ -42,9 +45,6 @@ export const ContactBody = () => {
         <div
           css={css`
             ${formDecoration};
-            @media (max-width: ${maxWidth}) {
-              width: 100%;
-            }
           `}
         >
           お問い合わせの種類
@@ -61,8 +61,6 @@ export const ContactBody = () => {
         <div
           css={css`
             ${formDecoration};
-            @media (max-width: ${maxWidth}) {
-              width: 100%;
           `}
         >
           KUJIRA　Cafeにご来店いただいたことはありますか。
@@ -82,8 +80,6 @@ export const ContactBody = () => {
         <div
           css={css`
             ${formDecoration};
-            @media (max-width: ${maxWidth}) {
-              width: 100%;
           `}
         >
           当カフェをお知りになったきっかけは？
@@ -124,9 +120,6 @@ export const ContactBody = () => {
         <div
           css={css`
             ${formDecoration};
-            @media (max-width: ${maxWidth}) {
-              width: 100%;
-              
           `}
         >
           お問い合わせの件名
@@ -143,8 +136,6 @@ export const ContactBody = () => {
         <div
           css={css`
             ${formDecoration};
-            @media (max-width: ${maxWidth}) {
-              width: 100%;
           `}
         >
           お問い合わせの具体的な内容
@@ -160,8 +151,6 @@ export const ContactBody = () => {
         <div
           css={css`
             ${formDecoration};
-            @media (max-width: ${maxWidth}) {
-              width: 100%;
           `}
         >
           <input
