@@ -55,6 +55,7 @@ export const MenuBody = () => {
               border-bottom: 1px dotted #bec2c7;
               font-size: 16px;
               line-height: 1.6;
+              width: 100%;
               padding: 20px 8px;
               @media (max-width: ${maxWidth}) {
                 flex-direction: column;
@@ -65,14 +66,14 @@ export const MenuBody = () => {
               src={item.image}
               alt={`${item.name}`}
               css={css`
-                max-width: 100%;
-                height: auto;
+                flex: 1 1 auto;
+
                 margin-right: 16px;
               `}
             />
             <div
               css={css`
-                min-width: 366px;
+                flex: 0 0 336px;
               `}
             >
               <p
