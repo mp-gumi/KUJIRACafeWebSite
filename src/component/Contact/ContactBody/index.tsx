@@ -11,21 +11,11 @@ const kindList = [
   { value: "other", displayText: "その他のお問い合わせ" },
 ];
 
-const kinds = kindList.map((kind) => {
-  return <option value={`${kind.value}`}>{kind.displayText}</option>;
-});
-
 const howList = [
-  { value: "friends", id: "how_friends", displayName: "お友達の紹介で" },
-  {
-    value: "magazines",
-    id: "how_magazines",
-    displayName: "雑誌・Webサイトで見て",
-  },
-  { value: "other", id: "how_other", displayName: "その他" },
+  { value: "friends", displayText: "お友達の紹介で" },
+  { value: "magazines", displayText: "雑誌・Webサイトで見て" },
+  { value: "other", displayText: "その他" },
 ];
-
-// const hows =
 
 export const ContactBody = () => {
   const [values, setValues] = useState({
@@ -60,7 +50,7 @@ export const ContactBody = () => {
   };
 
   const handleSubmit = () => {
-    alert({ values });
+    alert(values);
   };
 
   const formDecoration = css`
@@ -104,7 +94,11 @@ export const ContactBody = () => {
               width: 100%;
             `}
           >
-            {kinds}
+            {kindList.map((kind) => {
+              return (
+                <option value={`${kind.value}`}>{kind.displayText}</option>
+              );
+            })}
           </select>
         </div>
         <div
@@ -112,7 +106,7 @@ export const ContactBody = () => {
             ${formDecoration};
           `}
         >
-          KUJIRA　Cafeにご来店いただいたことはありますか。
+          KUJIRA　Cafeにご来店いただいたことはありますか？
           <br />
           <input
             type="radio"
@@ -153,16 +147,16 @@ export const ContactBody = () => {
                   type="checkbox"
                   name="how"
                   value={how.value}
-                  id={how.id}
+                  id={`how_${how.value}`}
                   onChange={handleInputChange}
                 />
                 <label
-                  htmlFor={how.id}
+                  htmlFor={`how_${how.value}`}
                   css={css`
                     padding-right: 10px;
                   `}
                 >
-                  {how.displayName}
+                  {how.displayText}
                 </label>
               </div>
             );
