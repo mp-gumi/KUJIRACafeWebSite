@@ -2,8 +2,7 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/react";
 import React, { useState } from "react";
-import { textBlue } from "src/component/Home/HomeBody";
-import { maxWidth } from "src/constants";
+import { maxWidth, titleCss } from "src/constants";
 
 type values = {
   kind: string;
@@ -64,7 +63,7 @@ export const ContactBody = () => {
     alert(JSON.stringify(values));
   };
 
-  const formDecoration = css`
+  const formCss = css`
     font-size: 16px;
     line-height: 1.6;
     width: 30em;
@@ -79,12 +78,7 @@ export const ContactBody = () => {
     <div>
       <h2
         css={css`
-          margin: 20px 0;
-          padding: 5px;
-          font-size: 22px;
-          font-weight: bold;
-          color: ${textBlue};
-          border-bottom: dotted 3px ${textBlue};
+          ${titleCss}
         `}
       >
         お問い合わせ
@@ -93,7 +87,7 @@ export const ContactBody = () => {
       <form onSubmit={handleSubmit}>
         <div
           css={css`
-            ${formDecoration};
+            ${formCss};
           `}
         >
           お問い合わせの種類
@@ -114,7 +108,7 @@ export const ContactBody = () => {
         </div>
         <div
           css={css`
-            ${formDecoration};
+            ${formCss};
           `}
         >
           KUJIRA　Cafeにご来店いただいたことはありますか？
@@ -146,7 +140,7 @@ export const ContactBody = () => {
         </div>
         <div
           css={css`
-            ${formDecoration};
+            ${formCss};
           `}
         >
           当カフェをお知りになったきっかけは？
@@ -168,7 +162,7 @@ export const ContactBody = () => {
         </div>
         <div
           css={css`
-            ${formDecoration};
+            ${formCss};
           `}
         >
           お問い合わせの件名
@@ -186,7 +180,7 @@ export const ContactBody = () => {
         </div>
         <div
           css={css`
-            ${formDecoration};
+            ${formCss};
           `}
         >
           お問い合わせの具体的な内容
@@ -203,7 +197,7 @@ export const ContactBody = () => {
         </div>
         <div
           css={css`
-            ${formDecoration};
+            ${formCss};
           `}
         >
           <input

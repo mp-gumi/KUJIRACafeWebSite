@@ -2,7 +2,7 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/react";
 import { Link } from "react-router-dom";
-import { textBlue } from "src/component/Home/HomeBody";
+import { textBlue } from "src/constants";
 
 const addressContent = (
   <div>

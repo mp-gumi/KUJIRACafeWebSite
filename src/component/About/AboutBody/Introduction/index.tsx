@@ -2,9 +2,9 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/react";
 import { Link } from "react-router-dom";
+import { maxWidth, textBlue } from "src/constants";
+
 import aboutPhoto from "src/component/About/AboutBody/Introduction/about-photo.jpg";
-import { textBlue } from "src/component/Home/HomeBody";
-import { maxWidth } from "src/constants";
 
 export const Introduction = () => {
   return (

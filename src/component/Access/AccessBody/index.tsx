@@ -2,7 +2,7 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/react";
 import mapImage from "src/component/Access/AccessBody/map.png";
-import { textBlue } from "src/component/Home/HomeBody";
+import { textBlue } from "src/constants";
 
 const routeList = [
   "駅東口を出ます。",

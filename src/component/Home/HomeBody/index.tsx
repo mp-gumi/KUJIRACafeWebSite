@@ -1,9 +1,9 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, css } from "@emotion/react";
+import { titleCss } from "src/constants";
 import keyVisual from "src/component/Home/HomeBody/keyvisual.jpg";
 
-export const textBlue = "#3f5170";
 export const HomeBody = () => {
   return (
     <div>
@@ -17,12 +17,7 @@ export const HomeBody = () => {
       <h2
         id="news"
         css={css`
-          margin: 20px 0;
-          padding: 5px;
-          font-size: 22px;
-          font-weight: bold;
-          color: ${textBlue};
-          border-bottom: dotted 3px ${textBlue};
+          ${titleCss}
         `}
       >
         News

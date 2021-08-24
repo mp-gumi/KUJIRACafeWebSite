@@ -2,7 +2,7 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/react";
 import backgroundFooter from "src/component/Footer/footer-bg.png";
-import { textBlue } from "src/component/Home/HomeBody";
+import { textBlue } from "src/constants";
 
 export const Footer = () => {
   return (

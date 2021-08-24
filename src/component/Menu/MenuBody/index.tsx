@@ -4,8 +4,7 @@ import { jsx, css } from "@emotion/react";
 import cassisOrangeJuice from "src/component/Menu/MenuBody/menu-photo1.jpg";
 import nutsTarte from "src/component/Menu/MenuBody/menu-photo2.jpg";
 import plumTarte from "src/component/Menu/MenuBody/menu-photo3.jpg";
-import { textBlue } from "src/component/Home/HomeBody";
-import { maxWidth } from "src/constants";
+import { maxWidth, textBlue } from "src/constants";
 
 const itemList = [
   {
