@@ -61,7 +61,7 @@ export const ContactBody = () => {
   };
 
   const handleSubmit = () => {
-    alert(values);
+    alert(JSON.stringify(values));
   };
 
   const formDecoration = css`
