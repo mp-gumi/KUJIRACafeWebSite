@@ -36,12 +36,13 @@ export const ContactBody = () => {
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.type === "checkbox") {
-      const value = event.target.value;
       if (event.target.checked) {
-        const howArray = [...values.how, value];
+        const howArray = [...values.how, event.target.value];
         setValues({ ...values, how: howArray });
       } else {
-        const howArray = values.how.filter((element) => element !== value);
+        const howArray = values.how.filter(
+          (element) => element !== event.target.value
+        );
         setValues({ ...values, how: howArray });
       }
     } else {
@@ -50,17 +51,13 @@ export const ContactBody = () => {
   };
 
   const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    const value = event.target.value;
-    const name = event.target.name;
-    setValues({ ...values, [name]: value });
+    setValues({ ...values, [event.target.name]: event.target.value });
   };
 
   const handleTextAreaChange = (
     event: React.ChangeEvent<HTMLTextAreaElement>
   ) => {
-    const value = event.target.value;
-    const name = event.target.name;
-    setValues({ ...values, [name]: value });
+    setValues({ ...values, [event.target.name]: event.target.value });
   };
 
   const handleSubmit = () => {
