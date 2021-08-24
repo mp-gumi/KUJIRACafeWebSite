@@ -68,7 +68,6 @@ export const MenuBody = () => {
               css={css`
                 max-width: 100%;
                 margin-right: 16px;
-                flex-basis: max-content;
               `}
             />
 
@@ -77,7 +76,7 @@ export const MenuBody = () => {
                 min-width: 328px;
               `}
             >
-              <p
+              <h3
                 css={css`
                   font-weight: bold;
                   @media (max-width: ${maxWidth}) {
@@ -85,7 +84,7 @@ export const MenuBody = () => {
                 `}
               >
                 {item.name}
-              </p>
+              </h3>
               <p
                 css={css`
                   margin: 16px 0;
