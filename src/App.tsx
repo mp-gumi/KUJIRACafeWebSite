@@ -7,8 +7,7 @@ import { About } from "src/component/About";
 import { Access } from "src/component/Access";
 import { Menu } from "src/component/Menu";
 import { Contact } from "src/component/Contact";
-
-export const maxWidth = "767px";
+import { maxWidth } from "src/constants";
 
 export const App = () => {
   return (

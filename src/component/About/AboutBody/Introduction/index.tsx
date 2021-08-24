@@ -4,7 +4,7 @@ import { jsx, css } from "@emotion/react";
 import { Link } from "react-router-dom";
 import aboutPhoto from "src/component/About/AboutBody/Introduction/about-photo.jpg";
 import { textBlue } from "src/component/Home/HomeBody";
-import { maxWidth } from "src/App";
+import { maxWidth } from "src/constants";
 
 export const Introduction = () => {
   return (

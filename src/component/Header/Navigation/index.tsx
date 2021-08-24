@@ -3,7 +3,7 @@
 import { jsx, css } from "@emotion/react";
 import { Link } from "react-router-dom";
 import backgroundNavigation from "src/component/Header/Navigation/menu-bg.png";
-import { maxWidth } from "src/App";
+import { maxWidth } from "src/constants";
 
 const pageList = [
   { displayName: "ホーム", urlName: "home" },

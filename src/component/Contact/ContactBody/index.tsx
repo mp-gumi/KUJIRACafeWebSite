@@ -3,7 +3,7 @@
 import { jsx, css } from "@emotion/react";
 import React, { useState } from "react";
 import { textBlue } from "src/component/Home/HomeBody";
-import { maxWidth } from "src/App";
+import { maxWidth } from "src/constants";
 
 type values = {
   kind: string;

@@ -3,7 +3,7 @@
 import { jsx, css } from "@emotion/react";
 import { Link } from "react-router-dom";
 import logo from "src/component/Header/Logo/logo.png";
-import { maxWidth } from "src/App";
+import { maxWidth } from "src/constants";
 
 export const Logo = () => {
   return (

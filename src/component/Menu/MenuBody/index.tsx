@@ -5,7 +5,7 @@ import cassisOrangeJuice from "src/component/Menu/MenuBody/menu-photo1.jpg";
 import nutsTarte from "src/component/Menu/MenuBody/menu-photo2.jpg";
 import plumTarte from "src/component/Menu/MenuBody/menu-photo3.jpg";
 import { textBlue } from "src/component/Home/HomeBody";
-import { maxWidth } from "src/App";
+import { maxWidth } from "src/constants";
 
 const itemList = [
   {
@@ -55,8 +55,8 @@ export const MenuBody = () => {
               border-bottom: 1px dotted #bec2c7;
               font-size: 16px;
               line-height: 1.6;
-              width: 100vw;
               padding: 20px 8px;
+              width: 100%;
               @media (max-width: ${maxWidth}) {
                 flex-direction: column;
               }
