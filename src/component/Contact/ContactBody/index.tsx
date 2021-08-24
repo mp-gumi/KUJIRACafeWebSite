@@ -5,6 +5,14 @@ import React, { useState } from "react";
 import { textBlue } from "src/component/Home/HomeBody";
 import { maxWidth } from "src/App";
 
+type values = {
+  kind: string;
+  first: string;
+  how: string[];
+  subject: string;
+  message: string;
+};
+
 const kindList = [
   { value: "reservation", displayText: "ご予約" },
   { value: "event", displayText: "イベントについて" },
@@ -18,7 +26,7 @@ const howList = [
 ];
 
 export const ContactBody = () => {
-  const [values, setValues] = useState({
+  const [values, setValues] = useState<values>({
     kind: "reservation",
     first: "no",
     how: [],
@@ -28,8 +36,13 @@ export const ContactBody = () => {
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.type === "checkbox") {
+      const value = event.target.value;
       if (event.target.checked) {
-        // setValues({ ...values, how: event.target.value });
+        const howArray = [...values.how, value];
+        setValues({ ...values, how: howArray });
+      } else {
+        const howArray = values.how.filter((element) => element !== value);
+        setValues({ ...values, how: howArray });
       }
     } else {
       setValues({ ...values, [event.target.name]: event.target.value });
