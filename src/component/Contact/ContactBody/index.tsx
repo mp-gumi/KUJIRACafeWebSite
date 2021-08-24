@@ -1,6 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, css } from "@emotion/react";
+import React, { useState } from "react";
 import { textBlue } from "src/component/Home/HomeBody";
 import { maxWidth } from "src/App";
 
@@ -14,7 +15,54 @@ const kinds = kindList.map((kind) => {
   return <option value={`${kind.value}`}>{kind.displayText}</option>;
 });
 
+const howList = [
+  { value: "friends", id: "how_friends", displayName: "お友達の紹介で" },
+  {
+    value: "magazines",
+    id: "how_magazines",
+    displayName: "雑誌・Webサイトで見て",
+  },
+  { value: "other", id: "how_other", displayName: "その他" },
+];
+
+// const hows =
+
 export const ContactBody = () => {
+  const [values, setValues] = useState({
+    kind: "reservation",
+    first: "no",
+    how: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const value =
+      event.target.type === "checkbox"
+        ? event.target.checked
+        : event.target.value;
+    const name = event.target.name;
+    setValues({ ...values, [name]: value });
+  };
+
+  const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const value = event.target.value;
+    const name = event.target.name;
+    setValues({ ...values, [name]: value });
+  };
+
+  const handleTextAreaChange = (
+    event: React.ChangeEvent<HTMLTextAreaElement>
+  ) => {
+    const value = event.target.value;
+    const name = event.target.name;
+    setValues({ ...values, [name]: value });
+  };
+
+  const handleSubmit = () => {
+    alert({ values });
+  };
+
   const formDecoration = css`
     font-size: 16px;
     line-height: 1.6;
@@ -41,7 +89,7 @@ export const ContactBody = () => {
         お問い合わせ
       </h2>
 
-      <form>
+      <form onSubmit={handleSubmit}>
         <div
           css={css`
             ${formDecoration};
@@ -51,6 +99,7 @@ export const ContactBody = () => {
           <br />
           <select
             name="kind"
+            onChange={handleSelectChange}
             css={css`
               width: 100%;
             `}
@@ -65,7 +114,14 @@ export const ContactBody = () => {
         >
           KUJIRA　Cafeにご来店いただいたことはありますか。
           <br />
-          <input type="radio" name="first" value="no" id="first_no" checked />
+          <input
+            type="radio"
+            name="first"
+            value="no"
+            id="first_no"
+            checked
+            onChange={handleInputChange}
+          />
           <label
             htmlFor="first_no"
             css={css`
@@ -74,7 +130,13 @@ export const ContactBody = () => {
           >
             はい
           </label>
-          <input type="radio" name="first" value="yes" id="first_yes" />
+          <input
+            type="radio"
+            name="first"
+            value="yes"
+            id="first_yes"
+            onChange={handleInputChange}
+          />
           <label htmlFor="first_yes">いいえ</label>
         </div>
         <div
@@ -84,38 +146,27 @@ export const ContactBody = () => {
         >
           当カフェをお知りになったきっかけは？
           <br />
-          <input type="checkbox" name="how" value="friends" id="how_friends" />
-          <label
-            htmlFor="how_friends"
-            css={css`
-              padding-right: 10px;
-            `}
-          >
-            知り合いの紹介で
-          </label>
-          <input
-            type="checkbox"
-            name="how"
-            value="magazines"
-            id="how_magazines"
-          />
-          <label
-            htmlFor="how_magazines"
-            css={css`
-              padding-right: 10px;
-            `}
-          >
-            雑誌・Webサイトで見て
-          </label>
-          <input type="checkbox" name="how" value="other" id="how_other" />
-          <label
-            htmlFor="how_other"
-            css={css`
-              padding-right: 10px;
-            `}
-          >
-            その他
-          </label>
+          {howList.map((how) => {
+            return (
+              <div>
+                <input
+                  type="checkbox"
+                  name="how"
+                  value={how.value}
+                  id={how.id}
+                  onChange={handleInputChange}
+                />
+                <label
+                  htmlFor={how.id}
+                  css={css`
+                    padding-right: 10px;
+                  `}
+                >
+                  {how.displayName}
+                </label>
+              </div>
+            );
+          })}
         </div>
         <div
           css={css`
@@ -128,6 +179,8 @@ export const ContactBody = () => {
             type="text"
             name="subject"
             placeholder="お問い合わせ"
+            value={values.subject}
+            onChange={handleInputChange}
             css={css`
               width: 100%;
             `}
@@ -142,6 +195,8 @@ export const ContactBody = () => {
           <br />
           <textarea
             name="message"
+            onChange={handleTextAreaChange}
+            value={values.message}
             css={css`
               width: 100%;
               height: 10em;
@@ -161,6 +216,7 @@ export const ContactBody = () => {
               width: 100%;
             `}
           />
+          {console.log(values)}
         </div>
       </form>
     </div>
