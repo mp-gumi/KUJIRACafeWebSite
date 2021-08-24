@@ -21,18 +21,19 @@ export const ContactBody = () => {
   const [values, setValues] = useState({
     kind: "reservation",
     first: "no",
-    how: "",
+    how: [],
     subject: "",
     message: "",
   });
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const value =
-      event.target.type === "checkbox"
-        ? event.target.checked
-        : event.target.value;
-    const name = event.target.name;
-    setValues({ ...values, [name]: value });
+    if (event.target.type === "checkbox") {
+      if (event.target.checked) {
+        // setValues({ ...values, how: event.target.value });
+      }
+    } else {
+      setValues({ ...values, [event.target.name]: event.target.value });
+    }
   };
 
   const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
@@ -113,7 +114,7 @@ export const ContactBody = () => {
             name="first"
             value="no"
             id="first_no"
-            checked
+            defaultChecked
             onChange={handleInputChange}
           />
           <label
@@ -150,14 +151,7 @@ export const ContactBody = () => {
                   id={`how_${how.value}`}
                   onChange={handleInputChange}
                 />
-                <label
-                  htmlFor={`how_${how.value}`}
-                  css={css`
-                    padding-right: 10px;
-                  `}
-                >
-                  {how.displayText}
-                </label>
+                <label htmlFor={`how_${how.value}`}>{how.displayText}</label>
               </div>
             );
           })}
