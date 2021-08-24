@@ -214,7 +214,6 @@ export const ContactBody = () => {
               width: 100%;
             `}
           />
-          {console.log(values)}
         </div>
       </form>
     </div>
