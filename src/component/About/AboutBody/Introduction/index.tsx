@@ -3,8 +3,7 @@
 import { jsx, css } from "@emotion/react";
 import { Link } from "react-router-dom";
 import { maxWidth, titleCss, linkCssOrange } from "src/constants";
-
-import aboutPhoto from "src/component/About/AboutBody/Introduction/about-photo.jpg";
+import tartes from "src/component/About/AboutBody/Introduction/about-photo.jpg";
 
 export const Introduction = () => {
   return (
@@ -25,7 +24,7 @@ export const Introduction = () => {
         `}
       >
         <img
-          src={aboutPhoto}
+          src={tartes}
           alt="タルト"
           css={css`
             float: left;

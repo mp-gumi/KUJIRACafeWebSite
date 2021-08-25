@@ -10,6 +10,7 @@ const routeList = [
   "国道999号線を渡り直進します。",
   "銀行ATMの角を左に曲がり2軒目の1階です。",
 ];
+
 const routes = routeList.map((route) => {
   return (
     <li
