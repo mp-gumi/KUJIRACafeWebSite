@@ -1,7 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, css } from "@emotion/react";
-import { titleCss } from "src/constants";
+import { titleCss, linkCssOrange } from "src/constants";
 import keyVisual from "src/component/Home/HomeBody/keyvisual.jpg";
 
 export const HomeBody = () => {
@@ -42,9 +42,7 @@ export const HomeBody = () => {
           target="_blank"
           rel="noopener noreferrer"
           css={css`
-            color: #d25833;
-            &:hover {
-              color: #e3937a;
+            ${linkCssOrange}
             }
           `}
         >

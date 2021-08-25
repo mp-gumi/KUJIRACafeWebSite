@@ -4,7 +4,7 @@ import { jsx, css } from "@emotion/react";
 import cassisOrangeJuice from "src/component/Menu/MenuBody/menu-photo1.jpg";
 import nutsTarte from "src/component/Menu/MenuBody/menu-photo2.jpg";
 import plumTarte from "src/component/Menu/MenuBody/menu-photo3.jpg";
-import { maxWidth, textBlue } from "src/constants";
+import { maxWidth, titleCss } from "src/constants";
 
 const itemList = [
   {
@@ -35,12 +35,7 @@ export const MenuBody = () => {
     <div>
       <h2
         css={css`
-          margin: 20px 0;
-          padding: 5px;
-          font-size: 22px;
-          font-weight: bold;
-          color: ${textBlue};
-          border-bottom: dotted 3px ${textBlue};
+          ${titleCss};
         `}
       >
         メニュー

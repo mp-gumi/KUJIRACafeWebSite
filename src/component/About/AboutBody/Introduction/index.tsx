@@ -2,7 +2,7 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/react";
 import { Link } from "react-router-dom";
-import { maxWidth, textBlue } from "src/constants";
+import { maxWidth, titleCss, linkCssOrange } from "src/constants";
 
 import aboutPhoto from "src/component/About/AboutBody/Introduction/about-photo.jpg";
 
@@ -11,12 +11,7 @@ export const Introduction = () => {
     <div>
       <h2
         css={css`
-          margin: 20px 0;
-          padding: 5px;
-          font-size: 22px;
-          font-weight: bold;
-          color: ${textBlue};
-          border-bottom: dotted 3px ${textBlue};
+          ${titleCss};
         `}
       >
         手作りタルトと香り高い珈琲で、寛ぎのカフェタイムを
@@ -73,9 +68,7 @@ export const Introduction = () => {
         <Link
           to="/home#news"
           css={css`
-            color: #d25833;
-            &:hover {
-              color: #e3937a;
+           ${linkCssOrange}
             }
           `}
         >

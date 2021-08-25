@@ -10,3 +10,9 @@ export const titleCss = css`
   color: ${textBlue};
   border-bottom: dotted 3px ${textBlue};
 `;
+export const linkCssOrange = css`
+  color: #d25833;
+  &:hover {
+    color: #e3937a;
+  }
+`;

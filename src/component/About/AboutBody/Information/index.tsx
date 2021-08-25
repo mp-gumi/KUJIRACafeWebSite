@@ -2,7 +2,7 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/react";
 import { Link } from "react-router-dom";
-import { textBlue } from "src/constants";
+import { textBlue, titleCss, linkCssOrange } from "src/constants";
 
 const addressContent = (
   <div>
@@ -10,9 +10,7 @@ const addressContent = (
     <Link
       to="/access"
       css={css`
-        color: #d25833;
-        &:hover {
-          color: #e3937a;
+        ${linkCssOrange}
         }
       `}
     >
@@ -29,9 +27,7 @@ const reserveContent = (
       <Link
         to="/contact"
         css={css`
-          color: #d25833;
-          &:hover {
-            color: #e3937a;
+          ${linkCssOrange}
           }
         `}
       >
@@ -86,12 +82,7 @@ export const Information = () => {
     <div>
       <h2
         css={css`
-          margin: 20px 0;
-          padding: 5px;
-          font-size: 22px;
-          font-weight: bold;
-          color: ${textBlue};
-          border-bottom: dotted 3px ${textBlue};
+          ${titleCss};
         `}
       >
         店舗情報
