@@ -3,7 +3,7 @@
 import { jsx, css } from "@emotion/react";
 import { maxWidth } from "src/constants";
 
-type Item = {
+type ItemType = {
   name: string;
   image: string;
   description: string;
@@ -11,7 +11,7 @@ type Item = {
 };
 
 type Props = {
-  item: Item;
+  item: ItemType;
 };
 
 export const Item = (props: Props) => {
