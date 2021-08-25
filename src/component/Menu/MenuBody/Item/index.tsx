@@ -24,7 +24,6 @@ export const Item = (props: Props) => {
         line-height: 1.6;
         padding: 20px 8px;
         border-bottom: 1px dotted #bec2c7;
-        width: 100%;
         @media (max-width: ${maxWidth}) {
           flex-direction: column;
         }
@@ -34,14 +33,17 @@ export const Item = (props: Props) => {
         src={item.image}
         alt={`${item.name}`}
         css={css`
-          max-width: 100%;
+          min-width: 0;
+          flex: 1 1 auto;
           margin-right: 16px;
         `}
       />
-
       <div
         css={css`
-          min-width: 328px;
+          flex: 0 0 336px;
+          @media (max-width: ${maxWidth}) {
+            flex: none;
+          }
         `}
       >
         <h3
