@@ -1,0 +1,67 @@
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import { jsx, css } from "@emotion/react";
+import { maxWidth } from "src/constants";
+
+type Item = {
+  name: string;
+  image: string;
+  description: string;
+  price: number;
+};
+
+type Props = {
+  item: Item;
+};
+
+export const Item = (props: Props) => {
+  const { item } = props;
+  return (
+    <div
+      css={css`
+        display: flex;
+        font-size: 16px;
+        line-height: 1.6;
+        padding: 20px 8px;
+        border-bottom: 1px dotted #bec2c7;
+        width: 100%;
+        @media (max-width: ${maxWidth}) {
+          flex-direction: column;
+        }
+      `}
+    >
+      <img
+        src={item.image}
+        alt={`${item.name}`}
+        css={css`
+          max-width: 100%;
+          margin-right: 16px;
+        `}
+      />
+
+      <div
+        css={css`
+          min-width: 328px;
+        `}
+      >
+        <h3
+          css={css` 
+            font-weight: bold;
+            @media (max-width: ${maxWidth}) {
+              margin-top: 16px;
+          `}
+        >
+          {item.name}
+        </h3>
+        <p
+          css={css`
+            margin: 16px 0;
+          `}
+        >
+          {item.description}
+        </p>
+        <p>¥{item.price}-</p>
+      </div>
+    </div>
+  );
+};
