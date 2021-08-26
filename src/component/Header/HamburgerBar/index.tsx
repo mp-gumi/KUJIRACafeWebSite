@@ -15,7 +15,7 @@ export const HamburgerBar = (props: Props) => {
   const barCss = css`
     width: 2rem;
     height: 0.25rem;
-    background-color: ${textBlue};
+    background-color: white;
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
@@ -50,17 +50,20 @@ export const HamburgerBar = (props: Props) => {
       <div
         css={css`
           ${barCss};
-          transform: ${open ? "rotate(45beg)" : "rotate(0)"};
+          transform: ${open ? `rotate(45deg)` : `rotate(0)`};
         `}
       />
       <div
         css={css`
           ${barCss};
+          transform: ${open ? `translateX(-20px)` : `translateX(0)`};
+          opacity: ${open ? `0` : `1`};
         `}
       />
       <div
         css={css`
           ${barCss};
+          transform: ${open ? `rotate(-45deg)` : `rotate(0)`};
         `}
       />
     </div>
