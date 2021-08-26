@@ -29,6 +29,8 @@ export const Introduction = () => {
           css={css`
             float: left;
             padding: 0 1em 1em 0;
+            min-width: 0;
+            max-width: 100%;
             @media (max-width: ${maxWidth}) {
               float: none;
             }
