@@ -2,7 +2,6 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/react";
 import { Dispatch, SetStateAction } from "react";
-import { textBlue } from "src/constants";
 
 type Props = {
   open: boolean;

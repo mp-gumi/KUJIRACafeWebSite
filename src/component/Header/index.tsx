@@ -1,10 +1,11 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx, css } from "@emotion/react";
+import { jsx } from "@emotion/react";
 import { useState } from "react";
 import { Logo } from "src/component/Header/Logo";
 import { Navigation } from "src/component/Header/Navigation";
 import { HamburgerBar } from "src/component/Header/HamburgerBar";
+import { DrawerMenu } from "src/component/Header/DrawerMenu";
 
 export const pageList = [
   { displayName: "ホーム", urlName: "home" },
@@ -21,6 +22,7 @@ export const Header = () => {
       <Logo />
       <Navigation />
       <HamburgerBar open={open} setOpen={setOpen} />
+      <DrawerMenu open={open} />
     </div>
   );
 };
