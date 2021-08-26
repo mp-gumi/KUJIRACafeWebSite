@@ -27,9 +27,9 @@ export const HamburgerBar = (props: Props) => {
       onClick={() => setOpen(!open)}
       css={css`
         position: fixed;
-        top: 30px;
+        top: 3%;
         left: 5%;
-        background-color: ${textBlue};
+        background-color: ${open ? `transparent` : `${textBlue}`};
         border-radius: 50%;
         height: 3rem;
         width: 3rem;
