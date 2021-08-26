@@ -11,6 +11,8 @@ export const HeroImage = () => {
         alt=""
         css={css`
           width: 100%;
+          padding-top: 5px;
+          margin: 20px 0;
         `}
       />
     </div>
