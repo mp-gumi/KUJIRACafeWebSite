@@ -2,7 +2,6 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/react";
 import { Link } from "react-router-dom";
-import backgroundNavigation from "src/component/Header/Navigation/Line/menu-bg.png";
 import { maxWidth } from "src/constants";
 import { pageList } from "src/component/Header";
 
@@ -14,8 +13,9 @@ export const Links = () => {
         justify-content: start;
         padding: 10px 10px 15px 20px;
         @media (max-width: ${maxWidth}) {
-          flex-direction: column;
-          padding: 20px 10px 15px 20px;
+          display: none;
+          //flex-direction: column;
+          //padding: 20px 10px 15px 20px;
         }
       `}
     >
@@ -25,9 +25,9 @@ export const Links = () => {
             css={css`
               font-size: 16px;
               padding-right: 30px;
-              @media (max-width: ${maxWidth}) {
-                padding-bottom: 10px;
-              }
+              //@media (max-width: ${maxWidth}) {
+              //  padding-bottom: 10px;
+              //}
             `}
           >
             <Link

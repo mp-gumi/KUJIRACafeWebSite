@@ -2,7 +2,6 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/react";
 import backgroundNavigation from "src/component/Header/Navigation/Line/menu-bg.png";
-import { maxWidth } from "src/constants";
 
 export const Line = () => {
   return (

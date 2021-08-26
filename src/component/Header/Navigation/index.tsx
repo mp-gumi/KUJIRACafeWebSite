@@ -1,6 +1,6 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx, css } from "@emotion/react";
+import { jsx } from "@emotion/react";
 import { Links } from "src/component/Header/Navigation/Links";
 import { Line } from "src/component/Header/Navigation/Line";
 
