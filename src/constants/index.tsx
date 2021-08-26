@@ -1,5 +1,6 @@
 import { css } from "@emotion/react";
 
+export const backgroundColor = "#eeece9";
 export const maxWidth = "767px";
 export const textBlue = "#3f5170";
 export const titleCss = css`

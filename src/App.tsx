@@ -8,12 +8,13 @@ import { Access } from "src/component/Access";
 import { Menu } from "src/component/Menu";
 import { Contact } from "src/component/Contact";
 import { maxWidth } from "src/constants";
+import { backgroundColor } from "src/constants";
 
 export const App = () => {
   return (
     <div
       css={css`
-        background-color: #eeece9;
+        background-color: ${backgroundColor};
       `}
     >
       <div
